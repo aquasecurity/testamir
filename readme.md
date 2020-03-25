@@ -47,32 +47,32 @@ oc secrets add aqua-sa aqua-registry --for=pull -n aqua
 ## After the Installation
 There are multiple options to deploy the Aqua  CSP. You can review the different options in the following [file](https://github.com/aquasecurity/aqua-operator/blob/master/deploy/crds/operator_v1alpha1_aquacsp_cr.yaml).  Note that for production environments we recommend connecting Aqua to an external production grade database. For lab implementations,  you can use the default database  in the installation scripts.
 Here is an example of a simple installation  - 
-```bash
-        --
-        apiVersion: operator.aquasec.com/v1alpha1
-        kind: AquaCsp
-        metadata:
-             name: aqua
-                namespace: aqua
-           spec:
-                  infra:                                    
-                        serviceAccount: "aqua-sa"               
-                        namespace: "aqua"                       
-                        version: "4.6"                          
-                        requirements: true                      
-                  common:
-                        imagePullSecret: "aqua-registry"        # Optional: if already created image pull secret then mention in here
-                        dbDiskSize: 10       
-                        serverDiskSize: 4   
-                 database:                                 
-                         replicas: 1                            
-                         service: "ClusterIP"                    
-                 gateway:                                  
-                        replicas: 1                             
-                        service: "ClusterIP"                    
-                server:                                   
-                       replicas: 1                             
-                      service: "NodePort"  
+```yaml
+--
+apiVersion: operator.aquasec.com/v1alpha1
+kind: AquaCsp
+metadata:
+     name: aqua
+        namespace: aqua
+   spec:
+          infra:                                    
+                serviceAccount: "aqua-sa"               
+                namespace: "aqua"                       
+                version: "4.6"                          
+                requirements: true                      
+          common:
+                imagePullSecret: "aqua-registry"        # Optional: if already created image pull secret then mention in here
+                dbDiskSize: 10       
+                serverDiskSize: 4   
+         database:                                 
+                 replicas: 1                            
+                 service: "ClusterIP"                    
+         gateway:                                  
+                replicas: 1                             
+                service: "ClusterIP"                    
+        server:                                   
+               replicas: 1                             
+              service: "NodePort"  
 --
 ```
 
