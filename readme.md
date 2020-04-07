@@ -1,4 +1,4 @@
-The Aqua Security Operator runs within an OpenShift cluster and is responsible for deploying and managing the Aqua Security platform and components :
+The Aqua Security Operator runs within an OpenShift cluster and is responsible for deploying and managing the Aqua Security platform and components:
 * Server (aka “console”)
 * Database (for production environments we recommend to use an external database and not the Aqua default database)  
 * Gateway 
@@ -6,19 +6,19 @@ The Aqua Security Operator runs within an OpenShift cluster and is responsible f
 * Scanner
 * CSP (a simple package that contains the Server, Database, and Gateway)
 
-Use the Aqua-Operator to : 
+Use the Aqua-Operator to: 
 * Deploy Aqua Security components on OpenShift
 * Scale up Aqua Security components with extra replicas
 * Assign metadata tags to Aqua Security components
 * Automatically scale the number of Aqua scanners based on the number of images in the scan queue
 	
-The Aqua operator provides a few Custom Resrouces that enables the flexability to insatll Aqua in different confiugratoins. Please make sure to read the Aqua installation manual (https://docs.aquasec.com/docs) before using the Operator. For advance configuraions please consult with Aqua's support team.
+The Aqua Operator provides a few custom resources that enable the flexibility to insatll Aqua in different configurations. Please make sure to read the Aqua installation manual (https://docs.aquasec.com/docs) before using the Operator. For advance configurations please consult with Aqua's support team.
     
-For a simple Aqua configuration please follow the following guidelines -
+For a simple Aqua configuration please read the following guidelines -
 1. Install the Aqua Opertor 
-2. Manage all the pre-requists as covered in the insutrcstion below (see "Before You Begin Using the Operator CRDs")
-3. Use the AquaCSP Custom Resource to install Aqua in your Cluster. AquaCSP will automaticlly deploy the Console, Database, Scanner, and Gateway CR
-4. To install the Enforcer CR, you will need to access Aqua and create a new Enforcer Group. Copy the group's 'token' as you will need it later for the Enfrocer Custom Resource
+2. Manage all the pre-requisites as covered in the instructions below (see "Before You Begin Using the Operator CRDs")
+3. Use the Aqua CSP Custom Resource to install Aqua in your Cluster. Aqua CSP will automatically deploy the Console, Database, Scanner, and Gateway Custom Resource
+4. To install the Enforcer Custom Resource, you will need to access Aqua and create a new Enforcer Group. Copy the group's 'token' as you will need it later for the Enfrocer Custom Resource
 5. Use the AquaEnforcer Custom Resource to install the Aqua Enforcer. Replace the value of the 'token' property with the token you kept from step 3
 	
 
@@ -35,8 +35,8 @@ oc create secret generic aqua-database-password --from-literal=db-password=<pass
 oc secrets add aqua-sa aqua-registry --for=pull -n aqua
 ```
 
-## Installating AquaCSP
-There are multiple options to deploy the Aqua  CSP. You can review the different options in the following [file](https://github.com/aquasecurity/aqua-operator/blob/master/deploy/crds/operator_v1alpha1_aquacsp_cr.yaml).  Note that for production environments we recommend connecting Aqua to an external production grade database. For lab implementations,  you can use the default database in the installation scripts.
+## Installing Aqua CSP
+There are multiple options to deploy the Aqua  CSP. You can review the different options in the following [file](https://github.com/aquasecurity/aqua-operator/blob/master/deploy/crds/operator_v1alpha1_aquacsp_cr.yaml).  Note that for production environments we recommend connecting Aqua to an external production-grade database. For lab implementations,  you can use the default database in the installation scripts.
 
 Here is an example of a simple deployment  - 
 ```yaml
@@ -69,7 +69,7 @@ spec:
 
 You can define a Route to enable external access to Aqua's console.
 
-## Installating AquaEnforcer
+## Installing Aqua Enforcer
 You can review the different options to implement AquaEnforcer in the following [file](https://github.com/aquasecurity/aqua-operator/blob/master/deploy/crds/operator_v1alpha1_aquaenforcer_cr.yaml).
 
 Here is an example of a simple deployment  - 
