@@ -15,10 +15,11 @@ Use the Aqua-Operator to :
 The Aqua operator provides multiple Custom Resrouces that enables the flexability to insatll Aqua in different confiugratoins. Please make sure to read the Aqua installation manual (https://docs.aquasec.com/docs) before using the Operator. For advance configuraions please consult with Aqua's support team.
     
 For a simple Aqua configuration please follow the following guidelines -
-1. Manage all the pre-requists as covered in the insutrcstion below (see "Before You Begin Using the Operator CRDs")
-2. Use the AquaCSP Custom Resource to install Aqua in your Cluster. AquaCSP will automaticlly deploy the Console, Database, Scanner, and Gateway CR
-3. To install the Enforcer CR, you will need to access Aqua and create a new Enforcer Group. Copy the group's 'token' as you will need it later for the Enfrocer Custom Resource
-4. Use the AquaEnforcer Custom Resource to install the Aqua Enforcer. Replace the value of the 'token' property with the token you kept from step 3
+1. Install the Aqua Opertor 
+2. Manage all the pre-requists as covered in the insutrcstion below (see "Before You Begin Using the Operator CRDs")
+3. Use the AquaCSP Custom Resource to install Aqua in your Cluster. AquaCSP will automaticlly deploy the Console, Database, Scanner, and Gateway CR
+4. To install the Enforcer CR, you will need to access Aqua and create a new Enforcer Group. Copy the group's 'token' as you will need it later for the Enfrocer Custom Resource
+5. Use the AquaEnforcer Custom Resource to install the Aqua Enforcer. Replace the value of the 'token' property with the token you kept from step 3
 	
 
 ## Before You Begin Using the Operator CRDs
