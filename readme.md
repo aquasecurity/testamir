@@ -69,7 +69,7 @@ kind: AquaCsp
 You can define a Route to enable external access to Aqua's console.
 
 ## Installating AquaEnforcer
-You can review the different options to to implement AquaEnforcer in the following [file] (https://github.com/aquasecurity/aqua-operator/blob/master/deploy/crds/operator_v1alpha1_aquaenforcer_cr.yaml)
+You can review the different options to implement AquaEnforcer in the following [file] (https://github.com/aquasecurity/aqua-operator/blob/master/deploy/crds/operator_v1alpha1_aquaenforcer_cr.yaml)
 Here is an example of a simple installation  - 
 ```yaml
 ---
