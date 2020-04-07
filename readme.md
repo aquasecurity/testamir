@@ -12,7 +12,7 @@ Use the Aqua-Operator to :
 * Assign metadata tags to Aqua Security components
 * Automatically scale the number of Aqua scanners based on the number of images in the scan queue
 	
-The Aqua operator provides multiple Custom Resrouces that enables the flexability to insatll Aqua in different confiugratoins. Please make sure to read the Aqua installation manual (https://docs.aquasec.com/docs) before using the Operator. For advance configuraions please consult with Aqua's support team.
+The Aqua operator provides a few Custom Resrouces that enables the flexability to insatll Aqua in different confiugratoins. Please make sure to read the Aqua installation manual (https://docs.aquasec.com/docs) before using the Operator. For advance configuraions please consult with Aqua's support team.
     
 For a simple Aqua configuration please follow the following guidelines -
 1. Install the Aqua Opertor 
