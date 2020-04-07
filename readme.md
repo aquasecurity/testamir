@@ -43,28 +43,28 @@ Here is an example of a simple deployment  -
 ---
 apiVersion: operator.aquasec.com/v1alpha1
 kind: AquaCsp
-  metadata:
-    name: aqua
-    namespace: aqua
-  spec:
-    infra:                                    
-      serviceAccount: "aqua-sa"               
-      namespace: "aqua"                       
-      version: "4.6"                          
-      requirements: true                      
-    common:
-      imagePullSecret: "aqua-registry"        # Optional: if already created image pull secret then mention in here
-      dbDiskSize: 10       
-      serverDiskSize: 4   
-    database:                                 
-      replicas: 1                            
-      service: "ClusterIP"                    
-    gateway:                                  
-      replicas: 1                             
-      service: "ClusterIP"                    
-    server:                                   
-      replicas: 1                             
-      service: "NodePort" 
+metadata:
+  name: aqua
+  namespace: aqua
+spec:
+  infra:                                    
+    serviceAccount: "aqua-sa"               
+    namespace: "aqua"                       
+    version: "4.6"                          
+    requirements: true                      
+  common:
+    imagePullSecret: "aqua-registry"        # Optional: if already created image pull secret then mention in here
+    dbDiskSize: 10       
+    serverDiskSize: 4   
+  database:                                 
+    replicas: 1                            
+    service: "ClusterIP"                    
+  gateway:                                  
+    replicas: 1                             
+    service: "ClusterIP"                    
+  server:                                   
+    replicas: 1                             
+    service: "NodePort" 
 ```
 
 You can define a Route to enable external access to Aqua's console.
@@ -77,10 +77,10 @@ Here is an example of a simple deployment  -
 ---
 apiVersion: operator.aquasec.com/v1alpha1
 kind: AquaEnforcer
-  metadata:
-    name: aqua
-  spec:
-    infra:                                    
+metadata:
+  name: aqua
+spec:
+  infra:                                    
     serviceAccount: "aqua-sa"                
     version: "4.6"                          # Optional: auto generate to latest version
   common:
