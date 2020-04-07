@@ -12,7 +12,7 @@ Use the Aqua-Operator to:
 * Assign metadata tags to Aqua Security components
 * Automatically scale the number of Aqua scanners based on the number of images in the scan queue
 	
-The Aqua Operator provides a few custom resources that enable the flexibility to insatll Aqua in different configurations. Please make sure to read the Aqua installation manual (https://docs.aquasec.com/docs) before using the Operator. For advance configurations please consult with Aqua's support team.
+The Aqua Operator provides a few Custom Resources that enable the flexibility to insatll Aqua in different configurations. Please make sure to read the Aqua installation manual (https://docs.aquasec.com/docs) before using the Operator. For advance configurations please consult with Aqua's support team.
     
 For a simple Aqua configuration please read the following guidelines -
 1. Install the Aqua Opertor 
@@ -35,7 +35,7 @@ oc create secret generic aqua-database-password --from-literal=db-password=<pass
 oc secrets add aqua-sa aqua-registry --for=pull -n aqua
 ```
 
-## Installing Aqua CSP
+## Installing AquaCSP
 There are multiple options to deploy the Aqua  CSP. You can review the different options in the following [file](https://github.com/aquasecurity/aqua-operator/blob/master/deploy/crds/operator_v1alpha1_aquacsp_cr.yaml).  Note that for production environments we recommend connecting Aqua to an external production-grade database. For lab implementations,  you can use the default database in the installation scripts.
 
 Here is an example of a simple deployment  - 
@@ -69,7 +69,7 @@ spec:
 
 You can define a Route to enable external access to Aqua's console.
 
-## Installing Aqua Enforcer
+## Installing AquaEnforcer
 You can review the different options to implement AquaEnforcer in the following [file](https://github.com/aquasecurity/aqua-operator/blob/master/deploy/crds/operator_v1alpha1_aquaenforcer_cr.yaml).
 
 Here is an example of a simple deployment  - 
