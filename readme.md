@@ -1,16 +1,16 @@
 The Aqua Security Operator runs within an OpenShift cluster and is responsible for deploying and managing the Aqua Security platform and components :
-    * Server (aka “console”)
-    * Database (for production environments we recommend to use an external database and not the Aqua default database)  
-    * Gateway 
-    * Enforcer (aka “agent”)
-    * Scanner
-    * CSP (a simple package that contains the Server, Database, and Gateway)
+* Server (aka “console”)
+* Database (for production environments we recommend to use an external database and not the Aqua default database)  
+* Gateway 
+* Enforcer (aka “agent”)
+* Scanner
+* CSP (a simple package that contains the Server, Database, and Gateway)
 
-Use the Aqua-Operator to 
-    * Deploy Aqua Security components on OpenShift
-    * Scale up Aqua Security components with extra replicas
-    * Assign metadata tags to Aqua Security components
-    * Automatically scale the number of Aqua scanners based on the number of images in the scan queue
+Use the Aqua-Operator to : 
+* Deploy Aqua Security components on OpenShift
+* Scale up Aqua Security components with extra replicas
+* Assign metadata tags to Aqua Security components
+* Automatically scale the number of Aqua scanners based on the number of images in the scan queue
 	
 The Aqua operator provides multiple Custom Resrouces that enables the flexability to insatll Aqua in different confiugratoins. Please make sure to read the Aqua installation manual (https://docs.aquasec.com/docs) before using the Operator. For advance configuraions please consult with Aqua's support team.
     
@@ -24,8 +24,9 @@ For a simple Aqua configuration please follow the following guidelines -
 ## Before You Begin Using the Operator CRDs
 Install the Aqua Operator and obtain access to the Aqua registry - https://www.aquasec.com/about-us/contact-us/
 You will need to supply two secrets during the installation - 
-    * A secret for the Docker registry
-    * A secret for the database
+* A secret for the Docker registry
+* A secret for the database
+
 You can  list the secrets in the YAML files or you can define secrets in the OpenShift project (see example below) -
 ```bash
 oc create secret docker-registry aqua-registry --docker-server=registry.aquasec.com --docker-username=<AQUA_USERNAME> --docker-password=<AQUA_PASSWORD> --docker-email=<user email> -n aqua
