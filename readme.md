@@ -91,8 +91,8 @@ kind: AquaEnforcer
       registry: "registry.aquasec.com"      # Optional: if not given take the default value - registry.aquasec.com
       tag: "4.6"                            # Optional: if not given take the default value - 4.5 (latest tested version for this operator version)
       pullPolicy: "IfNotPresent"            # Optional: if not given take the default value - IfNotPresent
-    gateway:                                  # Required: data about the gateway address
-      host: aqua-gateway
-      port: 8443
-      token: "<<your-token>>"                            # Required: enforcer group token also can use an existing secret instead
+  gateway:                                  # Required: data about the gateway address
+    host: aqua-gateway
+    port: 8443
+  token: "<<your-token>>"                            # Required: enforcer group token also can use an existing secret instead
 ```
