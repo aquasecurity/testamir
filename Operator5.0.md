@@ -12,12 +12,12 @@ Use the Aqua-Operator to
 * Assign metadata tags to Aqua Security components
 * Automatically scale the number of Aqua scanners based on the number of images in the scan queue
 
-## Install the Operator
+## Install Aqua Operator
 Make sure you have access to the Aqua registry. If not please contact Aqua at cloudsales@aquasec.com.
 Create a new namespeace/project called 'aqua' for the AquaCSP deployment
 Install the Operator. The Operator will create a new serivce-account called aqua-sa.
 
-# Before you deploy the CRDs
+## Before you deploy the CRDs
 You will need to supply two secrets during the installation  
 * A secret for the Docker registry
 * A secret for the database
